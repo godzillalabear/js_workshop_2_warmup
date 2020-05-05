@@ -21,6 +21,12 @@ $(document).on("turbolinks:load", function() {
     	width: 'element'
     });
     $('.js-tag-select').select2({
+    	tags: true,
+    	data: [],
+    	tokenSeparators: [','], 
+    	placeholder: "Add your tags here",
+    	selectOnClose: true, 
+    	closeOnSelect: false
     	
     });
     $(".js-submit-btn").click(function(event){
@@ -42,7 +48,7 @@ $(document).on("turbolinks:load", function() {
 	});
 });
 
-
+console.log("!!")
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
