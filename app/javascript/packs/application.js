@@ -8,7 +8,18 @@ require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 
-require("styles")
+import 'bootstrap'
+import 'bootstrap/dist/css/bootstrap.css'
+import $ from "jquery";
+window.$ = $;
+import "select2";
+
+$(document).ready(function() {
+    $('.js-currency-select').select2({
+    	width: 'element'
+    });
+});
+
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
