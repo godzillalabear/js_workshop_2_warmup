@@ -14,7 +14,8 @@ import $ from "jquery";
 window.$ = $;
 import "select2";
 import "select2/dist/css/select2.min.css"
-import swal from 'sweetalert';
+import Swal from 'sweetalert2/dist/sweetalert2.js'
+import 'sweetalert2/src/sweetalert2.scss'
 
 $(document).on("turbolinks:load", function() {
     $('.js-currency-select').select2({
@@ -30,15 +31,20 @@ $(document).on("turbolinks:load", function() {
 
     $(".js-submit-btn").click(function(event){
 		event.preventDefault();
-		swal({
+		Swal.fire({
 		  title: "Are you sure?",
 		  text: "You will create a product!?",
 		  icon: "warning",
-		  buttons: true,
-		  dangerMode: true,
+		  showCancelButton: true,
+		  showConfirmButton: true, 
+		  cancelButtonColor: '#DD3333',
 		})
 		.then(function(willSubmit){
-			if(willSubmit){
+			if(willSubmit.value){
+				Swal.fire({
+					title: 'Loading...', 
+					showConfirmButton: false
+				})
 				$(".js-form").submit();
 			}else{
 				
