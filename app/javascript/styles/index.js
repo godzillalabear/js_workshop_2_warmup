@@ -1,4 +1,4 @@
 // index.js
 
-import './scaffolds.scss'
+import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.css'

@@ -1,4 +1,8 @@
 // index.js
-import $ from 'jquery'
+import $ from "jquery";
+window.$ = $;
+import "select2";
 
-import "./form.js"
+$(document).ready(function() {
+    $('.js-currency-select').select2();
+});
