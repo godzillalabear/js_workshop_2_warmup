@@ -13,6 +13,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import $ from "jquery";
 window.$ = $;
 import "select2";
+import "select2/dist/css/select2.min.css"
 
 $(document).on("turbolinks:load", function() {
     $('.js-currency-select').select2({
