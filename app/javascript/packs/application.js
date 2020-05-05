@@ -20,6 +20,28 @@ $(document).ready(function() {
     });
 });
 
+import swal from 'sweetalert';
+$(document).ready(function(){
+	$(".js-submit-btn").click(function(event){
+		event.preventDefault();
+		swal({
+		  title: "Are you sure?",
+		  text: "You will create a product!?",
+		  icon: "warning",
+		  buttons: true,
+		  dangerMode: true,
+		})
+		.then(function(willSubmit){
+			if(willSubmit){
+				willSubmit.submit();
+			}else{
+				
+			}
+		});
+	});
+  	
+});
+
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
