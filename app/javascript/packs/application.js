@@ -14,10 +14,32 @@ import $ from "jquery";
 window.$ = $;
 import "select2";
 
-$(document).ready(function() {
+$(document).on("turbolinks:load", function() {
     $('.js-currency-select').select2({
     	width: 'element'
     });
+});
+
+import swal from 'sweetalert';
+$(document).on("turbolinks:load", function(){
+	$(".js-submit-btn").click(function(event){
+		event.preventDefault();
+		swal({
+		  title: "Are you sure?",
+		  text: "You will create a product!?",
+		  icon: "warning",
+		  buttons: true,
+		  dangerMode: true,
+		})
+		.then(function(willSubmit){
+			if(willSubmit){
+				$(".js-form").submit();
+			}else{
+				
+			}
+		});
+	});
+  	
 });
 
 
