@@ -3,19 +3,28 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
-require("@rails/ujs").start()
-require("turbolinks").start()
-require("@rails/activestorage").start()
-require("channels")
+require("@rails/ujs").start();
+require("turbolinks").start();
+require("@rails/activestorage").start();
+require("channels");
 
-import 'bootstrap'
-import 'bootstrap/dist/css/bootstrap.css'
+//bootstrap
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.css';
+
+//select2
 import $ from "jquery";
 window.$ = $;
 import "select2";
-import "select2/dist/css/select2.min.css"
-import Swal from 'sweetalert2/dist/sweetalert2.js'
-import 'sweetalert2/src/sweetalert2.scss'
+import "select2/dist/css/select2.min.css";
+
+//sweetalert2
+import Swal from 'sweetalert2/dist/sweetalert2.js';
+import 'sweetalert2/src/sweetalert2.scss';
+
+//yarn add tempusdominus-bootstrap-4
+import 'tempusdominus-bootstrap-4';
+import 'tempusdominus-bootstrap-4/build/css/tempusdominus-bootstrap-4.min.css'
 
 $(document).on("turbolinks:load", function() {
     $('.js-currency-select').select2({
