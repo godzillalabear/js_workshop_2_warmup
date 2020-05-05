@@ -13,27 +13,27 @@
 
   <div class="field">
     <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name , class:'form-control'%>
   </div>
 
   <div class="field">
     <%= form.label :money %>
-    <%= form.text_field :money %>
+    <%= form.text_field :money , class:'form-control'%>
   </div>
 
   <div class="field">
     <%= form.label :start_at %>
-    <%= form.time_select :start_at %>
+    <%= form.time_select :start_at , class:'form-control'%>
   </div>
 
   <div class="field">
     <%= form.label :end_at %>
-    <%= form.time_select :end_at %>
+    <%= form.time_select :end_at , class:'form-control'%>
   </div>
 
   <div class="field">
     <%= form.label :currency %>
-    <select name="product[currency]">
+    <select name="product[currency]" class="form-control">
       <option value="NTD">NTD</option>
       <option value="USD">USD</option>
       <option value="HKD">HKD</option>
@@ -42,7 +42,7 @@
 
   <div class="field">
     <%= form.label :tag_list %>
-    <select name="product[tag_list][]" multiple= 'true'>
+    <select name="product[tag_list][]" multiple= 'true' , class='form-control'>
       <option value="tag1">tag1</option>
       <option value="tag2">tag2</option>
       <option value="tag3">tag3</option>
@@ -50,6 +50,6 @@
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class:"btn btn-outline-secondary"%>
   </div>
 <% end %>
