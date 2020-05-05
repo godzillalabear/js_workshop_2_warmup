@@ -20,15 +20,14 @@ $(document).on("turbolinks:load", function() {
     $('.js-currency-select').select2({
     	width: 'element'
     });
+
     $('.js-tag-select').select2({
-    	tags: true,
-    	data: [],
-    	tokenSeparators: [','], 
+    	tags: true, 
     	placeholder: "Add your tags here",
     	selectOnClose: true, 
-    	closeOnSelect: false
-    	
     });
+
+
     $(".js-submit-btn").click(function(event){
 		event.preventDefault();
 		swal({

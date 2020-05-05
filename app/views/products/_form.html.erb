@@ -43,6 +43,7 @@
   <div class="field">
     <%= form.label :tag_list %>
     <select name="product[tag_list][]" multiple= 'true' , class='js-tag-select form-control'>
+      <%= options_for_select(product.tag_list) %>
     </select>
   </div>
 
